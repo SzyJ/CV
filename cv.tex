@@ -1,0 +1,37 @@
+\documentclass[12pt,twoside]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\title{CV}
+\author{Szymon Jackiewicz}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{www.szymonjackiewi.cz}
+\fancyhead[R]{Szymon Jackiewicz}
+\fancyfoot{}
+\fancyfoot[C]{szy.jackiewicz@gmail.com\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +44 7450 232 949}
+
+% Thesis format that corresponds to the Newcastle University standards
+\titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{1em}{}
+\titleformat*{\section}{\normalfont\large\bfseries}
+\titleformat*{\subsection}{\normalfont\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalfont\normalsize\bfseries}
+
+\begin{document}
+
+\input{Sections/education}
+
+\input{Sections/work_experiance}
+
+\input{Sections/technical_skills}
+
+\input{Sections/achievements}
+
+\input{Sections/references_public}
+
+
+\end{document}
