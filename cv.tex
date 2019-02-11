@@ -5,17 +5,49 @@
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% Define Skillbar
+\definecolor{sjLightGray}{gray}{0.85}
+\definecolor{sjGray}{HTML}{3A3A3A}
+\definecolor{sjBlue}{HTML}{3867A7}
+
+\makeatletter
+\newdimen\skillb@level
+\newdimen\skillb@length
+\newdimen\skillb@height
+\skillb@length=120pt%
+\skillb@height=10pt%
+\newcommand*{\skillbar}[1]{%
+    \skillb@level=\dimexpr#1\skillb@length/100\relax%
+    {\color{sjBlue}\rule{\skillb@level}{\skillb@height}}%
+    {\color{sjLightGray}%
+        \rule{\dimexpr\skillb@length-\skillb@level\relax}{\skillb@height}}%
+}
+\newcommand*{\skill}[2]{%
+    \par\noindent%
+    {\hskip 1ex\small #1}\\%
+    \skillbar{#2}%
+}
+\makeatother
+
 
 \title{CV}
 \author{Szymon Jackiewicz}
 
 \pagestyle{fancy}
 \fancyhead{}
-\fancyhead[C]{\Large{Szymon Jackiewicz : Games Developement Programmer}}
+\fancyhead[C]{\Large{\textcolor{sjBlue}{\textbf{Szymon Jackiewicz}} \normalsize Games Developement Programmer}}
 \fancyfoot{}
 \fancyfoot[L]{\faEnvelopeO \  szy.jackiewicz@gmail.com \\ \faPhone \  +44 7450 232 949}
 \fancyfoot[R]{www.szymonjackiewi.cz \  \faLink \\ Stretford, G. Manchester, UK \  \faMapMarker}
-
+\fancyfoot[C]{
+  \begin{minipage}{0.3\textwidth}
+    \centering
+    \includegraphics[height=15mm]{SJ_Icon.png}
+  \end{minipage}
+  }
 
 % Thesis format that corresponds to the Newcastle University standards
 \titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{1em}{}
