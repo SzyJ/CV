@@ -11,6 +11,7 @@
 
 % Define Skillbar
 \definecolor{sjLightGray}{gray}{0.85}
+\definecolor{sjDarkGray}{HTML}{444444}
 \definecolor{sjGray}{HTML}{3A3A3A}
 \definecolor{sjBlue}{HTML}{3867A7}
 
@@ -22,7 +23,7 @@
 \skillb@height=5pt%
 \newcommand*{\skillbar}[1]{%
     \skillb@level=\dimexpr#1\skillb@length/100\relax%
-    {\color{sjBlue}\rule{\skillb@level}{\skillb@height}}%
+    {\color{sjDarkGray}\rule{\skillb@level}{\skillb@height}}%
     {\color{sjLightGray}%
         \rule{\dimexpr\skillb@length-\skillb@level\relax}{\skillb@height}}%
 }
@@ -41,21 +42,21 @@
 \fancyhead{}
 \fancyhead[L]{
   \Large{
-    \textcolor{sjBlue}{\textbf{Szymon Jackiewicz}}
+    \textcolor{sjDarkGray}{\textbf{Szymon Jackiewicz}}
   }
 }
 \fancyhead[R]{\normalsize Software and Games Developer}
 \fancyfoot{}
 \fancyfoot[L]{\faEnvelopeO \  szy.jackiewicz@gmail.com \\ \faPhone \  (+44) 7450 232 949}
-\fancyfoot[R]{www.szymonjackiewi.cz \  \faLink \\ Stretford, G. Manchester, UK \  \faMapMarker}
+\fancyfoot[R]{www.szy.wtf \  \faLink \\ Stretford, G. Manchester, UK \  \faMapMarker}
 \fancyfoot[C]{
   \begin{minipage}{0.3\textwidth}
     \centering
-    \includegraphics[height=15mm]{SJ_Icon.png}
+    \includegraphics[height=15mm]{SJ_Logo.png}
   \end{minipage}
   }
 
-\titleformat*{\section}{\color{sjBlue}\normalfont\large\bfseries}
+\titleformat*{\section}{\color{sjDarkGray}\normalfont\large\bfseries}
 \titleformat*{\subsection}{\normalfont\normalsize\bfseries}
 \titleformat*{\subsubsection}{\normalfont\normalsize\bfseries}
 
